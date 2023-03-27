@@ -7,16 +7,31 @@
     height: 200px;
     font-size: 48px;
 }
-#welcome -section{
-                background-color: yellow
+#welcome-section{
+                background-color: yellow;
+                height :320px;
+                font-size: larger;
             }
         </style>
-        <script></script>
+        <script>
+            function sayname(){
+                //Get the value of input name
+                var inputname = document.getElementById('name')
+                // print the name valu to a div with id name
+                var para = document.getElementById('name-value')
+                var textstring = `Your name is ${inputname.value}`
+
+                para.innerText = textstring;
+            }
+        </script>
     </head>
     <body>
         <header id="header">header</header>
-        <section id="welcome-section">
-        
+        <section id="welcome-section"> 
+            <input type="text" id="name">
+            <button onclick="sayname()">say my name</button>
+            
+            <p id="name-value"> </p>
         </section>
         <section id="projects"></section>
         <footer id="footer"></footer>
